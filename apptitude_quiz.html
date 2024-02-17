@@ -21,7 +21,7 @@
         border: solid 2px;
         margin: auto;
         max-width: 800px;
-        margin-top: 10%;
+        margin-top: 3%;
         height: 600px;
     }
     #Question{
@@ -51,6 +51,9 @@
     
     #timer{
         display: absolute;
+        margin-left: 50%;
+        font-size: 30px;
+    
     }
     .options{
         display: block;
@@ -83,11 +86,23 @@
             transform: translateY(-10px);
         }
     }
+    body{
+        background-image: linear-gradient(cyan, blue);
+    }
+    .correct{
+        background-color: chartreuse;
+    }
+    .error{
+        background-color: rgb(182, 35, 35);
+    }
+   
+    
    
     
    
 </style>
 <body>
+  
     <div class = "main-container">
         <div class = "timer" id = "alarm"><i class = "fa fa-clock-o"></i></div>
         <div id = "timer"></div>
@@ -98,7 +113,7 @@
             <div id = "options">
 
             </div>
-            <div class = "btn"><button id = "next">Next</button></div>
+            <div class = "btn"><button id = "previous">Previous</button><button id = "next">Next</button></div>
 
         </div>
     </div>
@@ -149,11 +164,15 @@
     let question = document.getElementById("Question");
     let options = document.getElementById("options");
     let next = document.getElementById("next");
+    let previous = document.getElementById("previous");
     let num = 0;
     let audio = new Audio("tic-tac-27828.mp3");
     let alarm = new Audio("clock-alarm-8761.mp3");
     let alarm2 = document.getElementById("alarm");
+    let score = document.getElementById("score");
+    let score_no = 0;
     next.onclick = function(){
+      
         var countDate = 10
     var count = setInterval(function(){
         
@@ -196,30 +215,93 @@
             options.appendChild(button);
             
             let answers = 0;
+            
             if(option.correct){
+                 
+                
                  button.dataset.correct = option.correct;
                 
                 
+                
             }
+           
             button.addEventListener("click", clicked);
            
         }
-    }
-    function clicked(e){
-        console.log("cliked")
-        const answer = e.target;
-        const isCorrect = answer.dataset.correct === "true";
-        if(isCorrect){
-            answer.classList.add("correct");
+       
+        function clicked(e){
+         
+            console.log("cliked");
 
-        }
-        else{
-            answer.classList.add("error");
-        }
+            const answer = e.target;
+            const isCorrect = answer.dataset.correct === "true";
+            let scores = document.getElementById("score");
       
-
+          
+            if(isCorrect){
+               
+                
+                answer.classList.add("correct");
+                audio.pause();
+                clearInterval(count);
+              
+                
+                co
+    
+            }
+            else{
+                answer.classList.add("error");
+            }
+          
+    
+        }
+       
     }
-   
+   previous.onclick = function(){
+    num--;
+    while(options.firstChild){
+          options.removeChild(options.firstChild);
+      }
+      question.innerText = array[num].question; 
+     
+      
+      array[num].options.forEach(option);
+     
+      function option(option){
+          const button = document.createElement("button");
+         button.classList.add("options");
+          button.innerText = option.text;
+          
+          options.appendChild(button);
+          
+          let answers = 0;
+          if(option.correct){
+               button.dataset.correct = option.correct;
+              
+              
+          }
+          button.addEventListener("click", clicked);
+         
+      }
+      function clicked(e){
+          console.log("cliked")
+          const answer = e.target;
+          const isCorrect = answer.dataset.correct === "true";
+          if(isCorrect){
+              answer.classList.add("correct");
+              audio.pause();
+              clearInterval(count);
+  
+          }
+          else{
+              answer.classList.add("error");
+          }
+        
+  
+      }
+     
+
+   }
    
     let answer = document.querySelectorAll('.btn');
     
