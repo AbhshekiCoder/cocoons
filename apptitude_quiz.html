@@ -18,11 +18,13 @@
 </head>
 <style>
     .main-container{
-        border: solid 2px;
-        margin: auto;
+       border: solid 2px;
         max-width: 800px;
+       
+        margin: auto;
+     
         margin-top: 3%;
-        height: 600px;
+        height: 700px;
     }
     #Question{
         border: solid 2px;
@@ -40,6 +42,7 @@
         margin-top: 100px;
 
         height: 200px;
+    
     }
     .btn{
         margin-top: 200px ;
@@ -57,12 +60,15 @@
     }
     .options{
         display: block;
-        width: 200px;
+        margin: auto;
+        width: 300px;
         border-radius: 10px 10px;
-        margin-top: 20px;
+        margin-top: 10px;
         background-color: white;
-        border: solid 2px;
+        
         height: 40px;
+        border: solid 2px;
+        border-color: grey;
     }
     .timer{
         display: flex;
@@ -86,15 +92,83 @@
             transform: translateY(-10px);
         }
     }
-    body{
-        background-image: linear-gradient(cyan, blue);
-    }
+   
     .correct{
         background-color: chartreuse;
     }
     .error{
         background-color: rgb(182, 35, 35);
     }
+    .cards{
+        margin: auto;
+        width: 1000px;
+       
+        column-gap: 10px;
+        row-gap: 10px;
+        margin-top: 10% ;
+    }
+    .cards>.col-md{
+        
+        height: 200px;
+        width: 300px;
+        border-radius: 20px 20px;
+        margin-left: 20px;
+        margin-top: 30px;
+        }
+    .cards>.col-md>a{
+        height: 200px;
+        width: 300px;
+    }
+    .cards>.col-md>a>img{
+        width: 300px;
+        height: 100%;
+        border-radius: 20px 20px;
+        box-shadow: 0px 0px 10px grey;
+    }
+    .cards>.col-md>a>img:hover{
+        width: 310px;
+        height: 210px;
+    }
+    button{
+        border-radius: 10px 10px;
+        margin-left: 20px;
+        height: 40px;
+        
+    }
+    .commentry{
+      
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #difficult{
+        width: 70px;
+        height: 70px;
+        animation: slidedown 2s linear infinite;
+        margin-left: 90%;
+        margin-top: 20%;
+    }
+    #difficult>img{
+        width: 70px;
+        height: 70px;
+    }
+    @keyframes slidedown{
+        0%{
+            transform: translateY(-100px);
+        }
+        100%{
+            transform: translateY(100px);
+        }
+    }
+    .score{
+        max-width: 150px;
+    }
+   
+ 
+    
+    
+    
    
     
    
@@ -102,8 +176,43 @@
    
 </style>
 <body>
+    <div class = "container " id = "container">
+        <div class = "cards row">
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png" onclick = "reasioning()"/></a>
+
+            </div>
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                
+            </div>
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                
+            </div>
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                
+            </div>
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                
+            </div>
+            <div class = "col-md">
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
   
-    <div class = "main-container">
+    <div class = "modal" id = "reasioning-modal">
+        <div class = "row">
+            <div class = "score col-md">
+
+            </div>
+        <div class = "main-container col-md">
         <div class = "timer" id = "alarm"><i class = "fa fa-clock-o"></i></div>
         <div id = "timer"></div>
         <div class = "container">
@@ -116,207 +225,313 @@
             <div class = "btn"><button id = "previous">Previous</button><button id = "next">Next</button></div>
 
         </div>
+        </div>
+        <div class = "commentry col-md">
+            <div class = "style modal" id = "difficult">
+                <img src = "img/Colorful Geometric Shapes Math Moodle Course Thumbnail (1) (1).png"/>
+            </div>
+        </div>
+        </div>
     </div>
 
 
     
+
+
+
+
+
    
 
     <script>
-        let array = [
-        {
-            "id": 1,
-            "question": "what is the color",
-            "answer": "yellow",
-            "options": ["black", "cyan", "green", "orange"],
-        },
-        {
-            "id": 2,
-            "question": "what is national bird",
-            "answer": "peackock",
-            "options": [
-            {text: "tiger", correct: "false"},
-            {text: "dear", correct: "false"},
-            {text: "fox", correct: "false"},
-            {text: "peackock", correct: "true"},
-
-            ],
-        },
-        {
-            "id": 2,
-            "question": "what is n bbj jjh",
-            "answer": "peackock",
-            "options": [
-            {text: "tiger", correct: "false"},
-            {text: "dear", correct: "false"},
-            {text: "fox", correct: "false"},
-            {text: "hgbhg", correct: "true"},
-
-            ],
-        },
-        {
-            "id": 2,
-            "question": "what is national bird",
-            
-            
-        }
-    ]
-    let question = document.getElementById("Question");
-    let options = document.getElementById("options");
-    let next = document.getElementById("next");
-    let previous = document.getElementById("previous");
-    let num = 0;
-    let audio = new Audio("tic-tac-27828.mp3");
-    let alarm = new Audio("clock-alarm-8761.mp3");
-    let alarm2 = document.getElementById("alarm");
-    let score = document.getElementById("score");
-    let score_no = 0;
-    next.onclick = function(){
-      
-        var countDate = 10
-    var count = setInterval(function(){
-        
-        var diff = countDate--;
-      
-        let timer = document.getElementById("timer");
-        timer.innerHTML = diff;
-        audio.play();
-        if(diff == 0){
-          clearInterval(count);
-          audio.pause();
-          alarm.play();
-          alarm2.classList.add("alarm");
-          setTimeout(() =>{
-            alarm.pause();
-            alarm2.classList.remove("alarm");
-
-          },5000)
-        }
-        
-
-
-    },1000)
-
-        
-        num++;
-      while(options.firstChild){
-            options.removeChild(options.firstChild);
-        }
-        question.innerText = array[num].question; 
        
-        
-        array[num].options.forEach(option);
-       
-        function option(option){
-            const button = document.createElement("button");
-           button.classList.add("options");
-            button.innerText = option.text;
+            console.log("clicked")
+            let container = document.getElementById("container");
+            let reasioning_modal = document.getElementById("reasioning-modal");
             
-            options.appendChild(button);
-            
-            let answers = 0;
-            
-            if(option.correct){
-                 
-                
-                 button.dataset.correct = option.correct;
-                
-                
-                
-            }
-           
-            button.addEventListener("click", clicked);
-           
-        }
-       
-        function clicked(e){
-         
-            console.log("cliked");
-
-            const answer = e.target;
-            const isCorrect = answer.dataset.correct === "true";
-            let scores = document.getElementById("score");
-      
-          
-            if(isCorrect){
-               
-                
-                answer.classList.add("correct");
-                audio.pause();
-                clearInterval(count);
-              
-                
-                co
-    
-            }
-            else{
-                answer.classList.add("error");
-            }
-          
-    
-        }
-       
-    }
-   previous.onclick = function(){
-    num--;
-    while(options.firstChild){
-          options.removeChild(options.firstChild);
-      }
-      question.innerText = array[num].question; 
-     
-      
-      array[num].options.forEach(option);
-     
-      function option(option){
-          const button = document.createElement("button");
-         button.classList.add("options");
-          button.innerText = option.text;
-          
-          options.appendChild(button);
-          
-          let answers = 0;
-          if(option.correct){
-               button.dataset.correct = option.correct;
-              
-              
-          }
-          button.addEventListener("click", clicked);
-         
-      }
-      function clicked(e){
-          console.log("cliked")
-          const answer = e.target;
-          const isCorrect = answer.dataset.correct === "true";
-          if(isCorrect){
-              answer.classList.add("correct");
-              audio.pause();
-              clearInterval(count);
-  
-          }
-          else{
-              answer.classList.add("error");
-          }
-        
-  
-      }
-     
-
-   }
-   
-    let answer = document.querySelectorAll('.btn');
-    
-
-        answer.forEach(Element =>{
-            Element.addEventListener("click", function(){
-                console.log("clicked")
-                let Answer = array[num].answer;
-                if(Answer === options.innerHTML){
-                    alert("correct");
+           let reasioning = function(){
+            reasioning_modal.style.display = "block";
+            container.style.display = "none";
+            function getVoices(){
+                let voices = speechSynthesis.getVoices();
+                if(!voices.length){
+                    let utterance = new SpeechSynthesisUtterance(" ");
+                    speechSynthesis.speak(utterance);
+                    voices = speechSynthesis.getVoices();
                 }
+                return voices;
+            }
+            function speak(text, voice, rate, pitch, volume){
+                let speakData = new SpeechSynthesisUtterance();
+                speakData.volume = volume;
+                speakData.rate = rate;
+                speakData.pitch = pitch;
+                speakData.voice = voice;
+                speakData.text = text;
+                speakData.lang = 'en';
+                speechSynthesis.speak(speakData);
+            }
+            setTimeout(() =>{
+              
+                if('speechSynthesis' in window){
+                    let voices = getVoices();
+                    let rate = 0.8, pitch = 1, volume = 1;
+                    let text = "please click on next button to start a quiz";
+                    speak(text, voices[1],rate,pitch,volume);
+                }
+                else{
+                    console.log("error");
                 
-            })
-        })
+                }
+
+            },2000)
+            let array = [
+            {
+                "id": 1,
+                "question": "what is the color",
+                "answer": "yellow",
+                "options": ["black", "cyan", "green", "orange"],
+            },
+            {
+                "id": 2,
+                "type": "difficult",
+                "question": "what is national bird",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "peackock", correct: "true"},
     
+                ],
+            },
+            {
+                "id": 2,
+                "type": "difficult",
+                "question": "what is n bbj jjh",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "hgbhg", correct: "true"},
+    
+                ],
+            },
+            {
+                "id": 2,
+                "question": "what is n bbj jjh",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "hgbhg", correct: "true"},
+    
+                ],
+            },
+            {
+                "id": 2,
+                "question": "what is national bird",
+                
+                
+            }
+        ]
+        let question = document.getElementById("Question");
+        let options = document.getElementById("options");
+        let next = document.getElementById("next");
+        let previous = document.getElementById("previous");
+        let num = 0;
+        let audio = new Audio("tic-tac-27828.mp3");
+        let alarm = new Audio("clock-alarm-8761.mp3");
+        let alarm2 = document.getElementById("alarm");
+        let score = document.getElementById("score");
+        let score_no = 0;
+       
+        
+        next.onclick = function(){
+           
+    
+           
+         
+            var countDate = 30
+        var count = setInterval(function(){
+            
+            var diff = countDate--;
+          
+            let timer = document.getElementById("timer");
+            timer.innerHTML = diff;
+            audio.play();
+            if(diff == 0){
+              clearInterval(count);
+              audio.pause();
+              alarm.play();
+              alarm2.classList.add("alarm");
+              setTimeout(() =>{
+                alarm.pause();
+                alarm2.classList.remove("alarm");
+    
+              },5000)
+            }
+            
+    
+    
+        },1000)
+    
+            
+            num++;
+          while(options.firstChild){
+                options.removeChild(options.firstChild);
+            }
+            question.innerText = array[num].question;
+                
+           
+            
+            array[num].options.forEach(option);
+            if(array[num].type == "difficult"){
+                console.log("difficult");
+               
+                    let difficult = document.getElementById("difficult");
+                    difficult.style.display = "block";
+                    if('speechSynthesis' in window){
+                        let voices = getVoices();
+                        let rate = 0.8, pitch = 1, volume = 2;
+                        let text = "oh! this question is  to  difficult";
+                        speak(text, voices[1],rate,pitch,volume);
+                    }
+                    else{
+                        console.log("error");
+                    
+                    }
+        
+                setTimeout(()=>{
+                    let difficult = document.getElementById("difficult");
+                    difficult.style.display = "none";
+            },10000)
+            }
+                
+    
+            
+           
+            function option(option){
+                const button = document.createElement("button");
+               button.classList.add("options");
+                button.innerText = option.text;
+                
+                options.appendChild(button);
+                
+                let answers = 0;
+                
+                if(option.correct){
+                     
+                    
+                     button.dataset.correct = option.correct;
+                    
+                    
+                    
+                }
+               
+                button.addEventListener("click", clicked);
+               
+            }
+           
+            function clicked(e){
+             
+                console.log("cliked");
+    
+                const answer = e.target;
+                const isCorrect = answer.dataset.correct === "true";
+                let scores = document.getElementById("score");
+          
+              
+                if(isCorrect){
+                   
+                    
+                    answer.classList.add("correct");
+                    audio.pause();
+                    clearInterval(count);
+                  
+                    
+                    
+        
+                }
+                else{
+                    answer.classList.add("error");
+                }
+              
+        
+            }
+           
+        }
+     
+     
+     
+     
+        previous.onclick = function(){
+        num--;
+        while(options.firstChild){
+              options.removeChild(options.firstChild);
+          }
+          question.innerText = array[num].question; 
+         
+          
+          array[num].options.forEach(option);
+         
+          function option(option){
+              const button = document.createElement("button");
+             button.classList.add("options");
+              button.innerText = option.text;
+              
+              options.appendChild(button);
+              
+              let answers = 0;
+              if(option.correct){
+                   button.dataset.correct = option.correct;
+                  
+                  
+              }
+              button.addEventListener("click", clicked);
+             
+          }
+          function clicked(e){
+              console.log("cliked")
+              const answer = e.target;
+              const isCorrect = answer.dataset.correct === "true";
+              if(isCorrect){
+                  answer.classList.add("correct");
+                  audio.pause();
+                  clearInterval(count);
+      
+              }
+              else{
+                  answer.classList.add("error");
+              }
+            
+      
+          }
+         
+    
+       }
+       
+        let answer = document.querySelectorAll('.btn');
+        
+    
+            answer.forEach(Element =>{
+                Element.addEventListener("click", function(){
+                    console.log("clicked")
+                    let Answer = array[num].answer;
+                    if(Answer === options.innerHTML){
+                        alert("correct");
+                    }
+                    
+                })
+            })
+        
+
+           }
+          
+
+        
     </script>
 
 </body>
