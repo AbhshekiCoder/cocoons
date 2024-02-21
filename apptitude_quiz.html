@@ -14,17 +14,10 @@
 
 
 
-
 </head>
 <style>
     .main-container{
-       border: solid 2px;
-        max-width: 800px;
-       
-        margin: auto;
      
-        margin-top: 3%;
-        height: 700px;
     }
     #Question{
         border: solid 2px;
@@ -34,7 +27,7 @@
         border-color: silver;
         display: flex;
         justify-content: center;
-        color: blue;
+        color: white;
         font-size: 20px;
     }
     
@@ -45,13 +38,30 @@
     
     }
     .btn{
-        margin-top: 200px ;
-     
-        display: block;
-        display: flex;
-        justify-content: end;
+      
+         
+        margin-top: 100px;
+        width: 100%;;
     }
-    
+    .btn>.col-md{
+  
+     width: 100px;
+     border-radius: 20px 20px;
+    background-color: transparent;
+     color: white;
+     font-weight: bold;
+     font-size: 20px;
+    margin-left: 20px;
+     border-color: white;
+        
+       
+    }
+    .next{
+        float: right;
+    }
+    .previous{
+        float: right;
+    }
     #timer{
         display: absolute;
         margin-left: 50%;
@@ -69,10 +79,12 @@
         height: 40px;
         border: solid 2px;
         border-color: grey;
+        color: purple;
     }
     .timer{
         display: flex;
         justify-content: end;
+        
     }
     .timer>.fa{
         font-size: 50px;
@@ -100,13 +112,17 @@
         background-color: rgb(182, 35, 35);
     }
     .cards{
-        margin: auto;
-        width: 1000px;
+      
+        max-width: 1000px;
+       
        
         column-gap: 10px;
-        row-gap: 10px;
-        margin-top: 10% ;
+       
+        
+        position: relative;
+      
     }
+    
     .cards>.col-md{
         
         height: 200px;
@@ -114,20 +130,70 @@
         border-radius: 20px 20px;
         margin-left: 20px;
         margin-top: 30px;
+        animation: slide-right 2s ease-in-out;
+        }
+        @keyframes slide-right {
+            0%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(-100px);
+            }
+            
+        }
+        .cards>.col-md:nth-child(1){
+            animation-delay: 0.2s;
+        }
+        .cards>.col-md:nth-child(2){
+            animation-delay: 0.40s;
+        }
+        .cards>.col-md:nth-child(3){
+            animation-delay: 0.80s;
+        }
+        .cards>.col-md:nth-child(4){
+            animation-delay: 1s;
+        }
+        .cards>.col-md:nth-child(5){
+            animation-delay: 1.50s;
+        }
+        .cards>.col-md:nth-child(6){
+            animation-delay: 2s;
+
         }
     .cards>.col-md>a{
         height: 200px;
-        width: 300px;
+        max-width: 300px;
     }
     .cards>.col-md>a>img{
         width: 300px;
         height: 100%;
         border-radius: 20px 20px;
         box-shadow: 0px 0px 10px grey;
+        opacity: 1;
     }
-    .cards>.col-md>a>img:hover{
+    .cards>.col-md>a>img{
+    
         width: 310px;
         height: 210px;
+    }
+    @media(max-width: 768px){
+        .cards>.col-md{
+            width: 150px;
+            height: 150px;
+        }
+        .cards>.col-md>a{
+            width: 150px;
+            height: 150px;
+        }
+        .cards>.col-md>a>img{
+            width: 150px;
+            height: 150px;
+        }
+        .cards>.col-md>a>img:hover{
+            width: 110px;
+            height: 110px;
+        }
+
     }
     button{
         border-radius: 10px 10px;
@@ -163,10 +229,83 @@
     }
     .score{
         max-width: 150px;
+       
+       
+        font-size: 30px;
+        display: grid;
+        align-items: center;
+    }
+    .score>h5{
+       
+        font-size: 30px;
     }
    
- 
+   .card-container::before{
+    content: "";
+    background-image: url("img/banner-hands-people-solving-puzzle-riddle-playing-intellectual-game-taking-part-quiz-tournament-challenging-their-141653231.webp");
+    background-size: cover;
+    position: absolute;
+   
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
     
+   }
+   .card-container{
+    position: relative;
+    
+  
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+   
+    
+   }
+
+   
+   #reasioning{
+   
+    
+    max-width: 800px;
+   
+    margin: auto;
+ 
+    margin-top: 3%;
+    height: 700px;
+  
+    ;
+    
+  
+    
+    
+
+   }
+   #reasioning>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px
+   
+   }
+   #type1{
+    
+   
+    position: absolute;
+    width: 800px;
+    padding: 10px;
+    
+    
+
+   }
+   
+   
+  
+   
     
     
    
@@ -176,13 +315,18 @@
    
 </style>
 <body>
-    <div class = "container " id = "container">
+    <div class = "card-container " id = "container">
+
         <div class = "cards row">
-            <div class = "col-md">
+            <div class = "col-md " >
                 <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png" onclick = "reasioning()"/></a>
 
             </div>
-            <div class = "col-md">
+            <div class = "col-md" >
+                <a href = "#"><img  src = "img/WhatsApp Image 2024-02-19 at 11.04.18 PM.jpeg"/></a>
+                
+            </div>
+            <div class = "col-md" >
                 <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
                 
             </div>
@@ -190,41 +334,60 @@
                 <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
                 
             </div>
-            <div class = "col-md">
+            <div class = "col-md" >
                 <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
                 
             </div>
             <div class = "col-md">
-                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
-                
-            </div>
-            <div class = "col-md">
-                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                <a href = "#"><img  src = "img/1.png"/></a>
                 
             </div>
             
         </div>
+       
+      
     </div>
     
   
     <div class = "modal" id = "reasioning-modal">
         <div class = "row">
             <div class = "score col-md">
+             <h5> Your score</h5>
+                <div id = "score" ></div>
 
             </div>
-        <div class = "main-container col-md">
-        <div class = "timer" id = "alarm"><i class = "fa fa-clock-o"></i></div>
-        <div id = "timer"></div>
+        <div class = "main-container col-md" id = "reasioning">
+      
+            
+        <div id = "type1">
+        <div class = "timer" id = "alarm"  ><i class = "fa fa-clock-o" style="color: white"></i></div>
+        <div id = "timer" style=" color: white;"></div>
         <div class = "container">
-            <div id = "Question">
+            <div id = "Question"  >
 
             </div>
-            <div id = "options">
+            <div id = "options"  >
 
             </div>
-            <div class = "btn"><button id = "previous">Previous</button><button id = "next">Next</button></div>
+            <div class = "btn row">
+                <div class = "btn btn-primary col-md" id = "answer" onclick = answer() >Answer</div>
+                <div class = " btn btn-secondary previous col-md" id = "previous"  >
+                    Previous
+                </div>
+                <div class = " btn btn-primary Next col-md" id = "next" >
+                    Next
+                </div>
+                
+            </div>
+            <div class = "description" id = "description">
+
+            </div>
+            
 
         </div>
+       
+        </div>
+        <img src = "img/_Purple Grunge Quiz Instagram Story (1).png"/>
         </div>
         <div class = "commentry col-md">
             <div class = "style modal" id = "difficult">
@@ -248,6 +411,7 @@
             console.log("clicked")
             let container = document.getElementById("container");
             let reasioning_modal = document.getElementById("reasioning-modal");
+            let score = document.getElementById("score");
             
            let reasioning = function(){
             reasioning_modal.style.display = "block";
@@ -345,7 +509,7 @@
         let audio = new Audio("tic-tac-27828.mp3");
         let alarm = new Audio("clock-alarm-8761.mp3");
         let alarm2 = document.getElementById("alarm");
-        let score = document.getElementById("score");
+    
         let score_no = 0;
        
         
@@ -417,6 +581,7 @@
                 const button = document.createElement("button");
                button.classList.add("options");
                 button.innerText = option.text;
+               
                 
                 options.appendChild(button);
                 
@@ -441,15 +606,17 @@
     
                 const answer = e.target;
                 const isCorrect = answer.dataset.correct === "true";
-                let scores = document.getElementById("score");
-          
+                 
               
                 if(isCorrect){
+                    score_no++;
+                    score.innerHTML =+ score_no +"/10"
                    
                     
                     answer.classList.add("correct");
                     audio.pause();
                     clearInterval(count);
+
                   
                     
                     
@@ -483,7 +650,7 @@
               button.innerText = option.text;
               
               options.appendChild(button);
-              
+             
               let answers = 0;
               if(option.correct){
                    button.dataset.correct = option.correct;
@@ -513,26 +680,13 @@
     
        }
        
-        let answer = document.querySelectorAll('.btn');
-        
-    
-            answer.forEach(Element =>{
-                Element.addEventListener("click", function(){
-                    console.log("clicked")
-                    let Answer = array[num].answer;
-                    if(Answer === options.innerHTML){
-                        alert("correct");
-                    }
-                    
-                })
-            })
-        
-
-           }
+    }
           
 
         
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
 
 </body>
 
