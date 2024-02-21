@@ -505,7 +505,7 @@
         </div>
 
       
-        <div class = "modal" id ="sidebar-button1">
+        <div class = "modal" id ="sidebar-button">
             <div class = "sidebar"  id = "sidebar">
                 <div class =  "name">
                      Aditiya 
@@ -542,43 +542,7 @@
                 
             </div>
         </div>
-        <div class = "modal" id ="sidebar-button2">
-            <div class = "sidebar"  id = "sidebar">
-                <div class =  "name">
-                     Aditiya 
-             
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "index.html">Home</a>
-
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#">My applications</a>
-                    
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#">Edit Resume</a>
-                </div>
-                <div class = "sidebar-item">
-                 <i class = "fa fa-user"></i>
-                  <a href = "course.html" id = "signup">Sign up</a>
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#">Sign in</a>
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#">Catogeries</a>
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#"  onmousedown = "exploreClick()" >Explore</a>
-                </div>
-                <div class = "sidebar-item">
-                    <a href = "#">Learnings</a>
-                </div>
-                
-                
-            </div>
-        </div>
+        
      
         </div>
         <div class = "explore-modal modal" id = "explore-modal">
@@ -770,15 +734,15 @@
 
             }
             let num = 1;
-             let sidebar_button1 = document.getElementById("sidebar-button1");
+             let sidebar_button = document.getElementById("sidebar-button");
              let sidebar_model = document.getElementById("sidebar-modal");
              sidebar_model.onclick = function(){
                 num++;
                 if(num % 2 == 0){
-                    sidebar_button1.style.display = "block";
+                    sidebar_button.style.display = "block";
                 }
                 else{
-                    sidebar_button1.style.display = "none";
+                    sidebar_button.style.display = "none";
                 }
              
 
@@ -825,16 +789,16 @@
                
         </script>
         <script>
-            let sidebarbutton = document.getElementById("sidebar-button2");
+            let sidebarbutton = document.getElementById("sidebar-button");
             let nums = 1;
             let sidebar = function(){
                 nums++;
                 if(nums % 2 == 0){
-                  sidebarbutton2.style.display = "block";
+                  sidebarbutton.style.display = "block";
   
                 }
                 else{
-                  sidebarbutton2.style.display = "none";
+                  sidebarbutton.style.display = "none";
                 }
                   
                }
