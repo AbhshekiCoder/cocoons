@@ -288,6 +288,47 @@
     .syllabuslist{
         max-height: 400px ;
     }
+    .project{
+        margin-top: 50px;
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .project>h1{
+        display: flex;
+        justify-content: center;
+    }
+    .projects{
+        padding: 10px;
+        column-gap: 20px;
+    }
+    .projects>.col-md{
+        padding: 10px;
+        border: solid 1px;
+        border-color: silver;
+       
+        border-radius: 20px 20px;
+        margin-top: 20px;
+    }
+    .projects>.col-md>div{
+        margin-top: 20px;
+        border-bottom: solid 2px blue;
+        max-width: 200px;
+    }
+    .projects>.col-md>p{
+        margin-top: 20px;
+    }
+    @media(max-width: 768px){
+
+        .project>.col-md>p{
+            font-size: 15px;
+        }
+        .project>h1{
+            font-size: 18px;
+        }
+      
+    }
     
     </style>
     <body>
@@ -758,6 +799,35 @@
             </div>
         </div>
        </div>
+    </div>
+    <div class = "project">
+        <h1>Android App Developement Course Project Details</h1>
+        <div class = "projects row">
+            <div class = "col-md">
+                <div >
+                    <b>A food ordering app</b>
+                </div>
+                <p>Using Kotlin and XML, create a food ordering app where users can choose from a variety of handpicked restaurants and order their favourite food items.</p>
+
+            </div>
+            <div class = "col-md">
+                <div >
+                    <b>A food ordering app</b>
+                </div>
+                <p>Using Kotlin and XML, create a food ordering app where users can choose from a variety of handpicked restaurants and order their favourite food items.</p>
+
+
+            </div>
+            <div class = "col-md">
+                <div >
+                    <b>A food ordering app</b>
+                </div>
+                <p>Using Kotlin and XML, create a food ordering app where users can choose from a variety of handpicked restaurants and order their favourite food items.</p>
+
+
+            </div>
+
+        </div>
     </div>
 
         <div class = "footer">

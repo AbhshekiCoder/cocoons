@@ -212,6 +212,7 @@
 .footer{
     background-color: rgb(55, 54, 54);
     padding: 10px;
+    
 }
 .social-media{
     display: flex;
@@ -250,7 +251,7 @@
 }
 .copyright>p{
     margin-left: 80%;
-    color: white;
+    color: rgb(173, 166, 166);
 }
 @media(max-width: 1250px){
     .social-media-app>.col-md>a>.fa{
@@ -261,7 +262,7 @@
         margin-left: 40%;
     }
     .copyright>p{
-        margin-left: 20%;
+        margin-left: 30%;
         color: white;
     }
 

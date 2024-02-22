@@ -30,6 +30,30 @@
         color: white;
         font-size: 20px;
     }
+    #Question2{
+        border: solid 2px;
+        max-width: 90%;
+        height: 50px;
+        border-radius: 10px 10px;
+        border-color: silver;
+        display: flex;
+        justify-content: center;
+        color: green;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    #Question3{
+        border: solid 2px;
+        max-width: 100%;
+        height: 50px;
+        border-radius: 10px 10px;
+        border-color: silver;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+    }
+    
     
     #options{
         margin-top: 100px;
@@ -83,11 +107,12 @@
     }
     .timer{
         display: flex;
-        justify-content: end;
+      
         
     }
     .timer>.fa{
         font-size: 50px;
+        margin-left: 80%;
     }
     .options:hover{
         background-color: grey;
@@ -234,6 +259,8 @@
         font-size: 30px;
         display: grid;
         align-items: center;
+     
+      
     }
     .score>h5{
        
@@ -267,8 +294,27 @@
    
     
    }
+#options2{
+    margin-top: 100px;
 
+    height: 200px;
+}
+.next2{
+    float: right;
+}
+.previous2{
+    float: right;
+}
+#timer2{
+    display: absolute;
+    margin-left: 50%;
+    font-size: 30px;
+
+}
+#reasioning-modal{
+    background-image: linear-gradient(cyan, blue);
    
+}
    #reasioning{
    
     
@@ -278,6 +324,7 @@
  
     margin-top: 3%;
     height: 700px;
+   
   
     ;
     
@@ -289,19 +336,168 @@
    #reasioning>img{
     width: 100%;
     height: 100%;
-    border-radius: 20px 20px
+    border-radius: 20px 20px;
+    display: none;
    
    }
    #type1{
     
    
     position: absolute;
-    width: 800px;
+   min-width: 800px;
     padding: 10px;
+    display: none;
     
     
 
    }
+   #type2{
+    
+   
+    position: absolute;
+    width: 800px;
+    padding: 10px;
+    display: none;
+    padding: 10px;
+
+   }
+   #started{
+    margin-top: 30%;
+    margin-left: 35%;
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    font-size: 20px;
+   }
+  
+   #basicmaths>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px;
+    display: none;
+   }
+   #basicmaths{
+    max-width: 800px;
+    margin: auto;
+   
+   
+    margin-top: 3%;
+    height: 700px;
+    background-color: aliceblue
+  
+   }
+   .btn2{
+      
+         
+    margin-top: 30px;
+    width: 100%;;
+}
+.btn2>.col-md{
+    width: 100px;
+border-radius: 20px 20px;
+background-color: transparent;
+color: green;
+font-weight: bold;
+font-size: 20px;
+margin-left: 20px;
+border-color: green;
+
+}
+.options2{
+display: block;
+margin: auto;
+width: 300px;
+border-radius: 10px 10px;
+margin-top: 10px;
+
+
+height: 40px;
+border: solid 2px;
+border-color: green;
+color: blue;
+}
+.btn3{
+      
+         
+    margin-top: 100px;
+    width: 100%;;
+}
+.btn3>.col-md{
+
+ width: 100px;
+ border-radius: 20px 20px;
+background-color: transparent;
+ color: white;
+ font-weight: bold;
+ font-size: 20px;
+margin-left: 20px;
+ border-color: white;
+    
+   
+}
+.next3{
+    float: right;
+}
+.previous3{
+    float: right;
+}
+#timer3{
+    display: absolute;
+    margin-left: 50%;
+    font-size: 30px;
+
+}
+.options3{
+    display: block;
+    margin: auto;
+    width: 300px;
+    border-radius: 10px 10px;
+    margin-top: 20px;
+    background-color: white;
+    
+    height: 40px;
+    border: solid 2px;
+    border-color: grey;
+    color: purple;
+}
+#english{
+    max-width: 800px;
+   
+    margin: auto;
+ 
+    margin-top: 3%;
+    height: 700px;
+    background-color: aliceblue
+}
+#english>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px;
+    display: none;
+   
+   }
+   #type3{
+    
+   
+    position: absolute;
+    width: 800px;
+    padding: 10px;
+    display: none;
+    
+    
+
+   }
+   @media(max-width: 768px){
+    #type1{
+       
+        width: 300px;
+    }
+    #type3{
+        width: 300px;
+
+    }
+}
+   
    
    
   
@@ -323,11 +519,11 @@
 
             </div>
             <div class = "col-md" >
-                <a href = "#"><img  src = "img/WhatsApp Image 2024-02-19 at 11.04.18 PM.jpeg"/></a>
+                <a href = "#"><img  src = "img/WhatsApp Image 2024-02-19 at 11.04.18 PM.jpeg" onclick = "mathsquiz()"/></a>
                 
             </div>
             <div class = "col-md" >
-                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png"/></a>
+                <a href = "#"><img  src = "img/Colorful Freelancer YouTube Thumbnail (1).png" onclick = "english()"/></a>
                 
             </div>
             <div class = "col-md">
@@ -345,6 +541,7 @@
             
         </div>
        
+       
       
     </div>
     
@@ -357,8 +554,6 @@
 
             </div>
         <div class = "main-container col-md" id = "reasioning">
-      
-            
         <div id = "type1">
         <div class = "timer" id = "alarm"  ><i class = "fa fa-clock-o" style="color: white"></i></div>
         <div id = "timer" style=" color: white;"></div>
@@ -387,15 +582,117 @@
         </div>
        
         </div>
-        <img src = "img/_Purple Grunge Quiz Instagram Story (1).png"/>
+        <button id = "started">Start</button>
+        <img src = "img/_Purple Grunge Quiz Instagram Story (1).png"  id = "img1"/>
+        </div>
+        
         </div>
         <div class = "commentry col-md">
+            <div class = "style modal" id = "difficult">
+                <img src = "img/Brown & Black Simple Quiz Instagram Story (6).png"/>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class = "modal" id = "basicmaths-modal">
+        <div class = "row">
+            <div class = "score col-md">
+             <h5> Your score</h5>
+                <div id = "score" ></div>
+
+            </div>
+        <div class = "main-container col-md" id = "basicmaths">
+        <div id = "type2">
+        <div class = "timer" id = "alarm"  ><i class = "fa fa-clock-o" style="color:darkgreen"></i></div>
+        <div id = "timer2" style="color: white"></div>
+        <div class = "container">
+            <div id = "Question2"  >
+
+            </div>
+            <div id = "options2"  >
+
+            </div>
+            <div class = "btn2 row">
+                <div class = "btn btn-primary col-md" id = "answer2" onclick = answer() >Answer</div>
+                <div class = " btn btn-secondary previous col-md" id = "previous2"  >
+                    Previous
+                </div>
+                <div class = " btn btn-primary Next col-md" id = "next2" >
+                    Next
+                </div>
+                
+            </div>
+            <div class = "description" id = "description2">
+
+            </div>
+            
+
+        </div>
+       
+        </div>
+        <button id = "started2">Start</button>
+        <img src = "img/Yellow Blue Simple Quiz Time Instagram Story.png" width="800px" height="800px"  id = "img2"/><
+        </div>
+       
+        </div>
+        <div class = "commentry2 col-md">
             <div class = "style modal" id = "difficult">
                 <img src = "img/Colorful Geometric Shapes Math Moodle Course Thumbnail (1) (1).png"/>
             </div>
         </div>
         </div>
     </div>
+    <div class = "modal" id = "english-modal">
+        <div class = "row">
+            <div class = "score col-md">
+             <h5> Your score</h5>
+                <div id = "score3" ></div>
+
+            </div>
+        <div class = "main-container col-md" id = "english">
+        <div id = "type3">
+        <div class = "timer" id = "alarm"  ><i class = "fa fa-clock-o" style="color: white"></i></div>
+        <div id = "timer3" style=" color: white;"></div>
+        <div class = "container">
+            <div id = "Question3"  >
+
+            </div>
+            <div id = "options3"  >
+
+            </div>
+            <div class = "btn3 row">
+                <div class = "btn btn-primary col-md" id = "answer" onclick = answer() >Answer</div>
+                <div class = " btn btn-secondary previous3 col-md" id = "previous3"  >
+                    Previous
+                </div>
+                <div class = " btn btn-primary Next3 col-md" id = "next3" >
+                    Next
+                </div>
+                
+            </div>
+            <div class = "description" id = "description3">
+
+            </div>
+            
+
+        </div>
+       
+        </div>
+        <button id = "started3">Start</button>
+        <img src = "img/Brown & Black Simple Quiz Instagram Story (4).png" id = "img3"/>
+        
+        </div>
+        <div class = "commentry col-md">
+            <div class = "style modal" id = "difficult3">
+                <img src = "img/Colorful Geometric Shapes Math Moodle Course Thumbnail (1) (1).png"/>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
 
 
     
@@ -412,6 +709,189 @@
             let container = document.getElementById("container");
             let reasioning_modal = document.getElementById("reasioning-modal");
             let score = document.getElementById("score");
+        
+            let num = 0;
+            let question = document.getElementById("Question");
+            let options = document.getElementById("options");
+            let next = document.getElementById("next");
+            let previous = document.getElementById("previous");
+          
+            let audio = new Audio("tic-tac-27828.mp3");
+            let alarm = new Audio("clock-alarm-8761.mp3");
+            let alarm2 = document.getElementById("alarm");
+            let type1 = document.getElementById("type1");
+            let start = document.getElementById("started");
+            let bg1 = document.getElementById("img1");
+            let mathsquiz_modal = document.getElementById("basicmaths-modal");
+            let bg2 = document.getElementById("img2");
+            let type2 = document.getElementById("type2");
+            let start2 = document.getElementById("started2");
+            let question2 = document.getElementById("Question2");
+            let options2 = document.getElementById("options2");
+            let next2 = document.getElementById("next2");
+            let previous2 = document.getElementById("previous2");
+           
+          
+            let bg3 = document.getElementById("img3");
+            let english_modal = document.getElementById("english-modal");
+           
+            let type3 = document.getElementById("type3");
+            let start3 = document.getElementById("started3");
+            let question3 = document.getElementById("Question3");
+            let options3 = document.getElementById("options3");
+            let next3 = document.getElementById("next3");
+            let previous3 = document.getElementById("previous3");
+            
+            let array = [
+            {
+                "id": 2,
+                "type": "difficult",
+                "question": "what is national bird",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "peackock", correct: "true"},
+    
+                ],
+            },
+        
+            {
+                "id": 2,
+                "type": "difficult",
+                "question": "what is n bbj jjh",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "hgbhg", correct: "true"},
+    
+                ],
+            },
+            
+
+             {
+                "id": 2,
+                "question": "what is n bbj jjh",
+                "answer": "peackock",
+                "options": [
+                {text: "tiger", correct: "false"},
+                {text: "dear", correct: "false"},
+                {text: "fox", correct: "false"},
+                {text: "hgbhg", correct: "true"},
+    
+                ],
+            },
+            {
+                "id": 2,
+                "question": "what is national bird",
+                
+                
+            }
+        ]
+        let array2 = [
+        {
+            "id": 2,
+            "type": "difficult",
+            "question": "what is national bird",
+            "answer": "peackock",
+            "options": [
+            {text: "tiger", correct: "false"},
+            {text: "dear", correct: "false"},
+            {text: "fox", correct: "false"},
+            {text: "peackock", correct: "true"},
+
+            ],
+        },
+    
+        {
+            "id": 2,
+            "type": "difficult",
+            "question": "what is n bbj jjh",
+            "answer": "peackock",
+            "options": [
+            {text: "tiger", correct: "false"},
+            {text: "dear", correct: "false"},
+            {text: "fox", correct: "false"},
+            {text: "hgbhg", correct: "true"},
+
+            ],
+        },
+        
+
+         {
+            "id": 2,
+            "question": "what is n bbj jjh",
+            "answer": "peackock",
+            "options": [
+            {text: "tiger", correct: "false"},
+            {text: "dear", correct: "false"},
+            {text: "fox", correct: "false"},
+            {text: "hgbhg", correct: "true"},
+
+            ],
+        },
+        {
+            "id": 2,
+            "question": "what is national bird",
+            
+            
+        }
+    ]
+    let array3 = [
+    {
+        "id": 2,
+        "type": "difficult",
+        "question": "what is national bird",
+        "answer": "peackock",
+        "options": [
+        {text: "tiger", correct: "false"},
+        {text: "dear", correct: "false"},
+        {text: "fox", correct: "false"},
+        {text: "peackock", correct: "true"},
+
+        ],
+    },
+
+    {
+        "id": 2,
+        "type": "difficult",
+        "question": "what is n bbj jjh",
+        "answer": "peackock",
+        "options": [
+        {text: "tiger", correct: "false"},
+        {text: "dear", correct: "false"},
+        {text: "fox", correct: "false"},
+        {text: "hgbhg", correct: "true"},
+
+        ],
+    },
+    
+
+     {
+        "id": 2,
+        "question": "what is n bbj jjh",
+        "answer": "peackock",
+        "options": [
+        {text: "tiger", correct: "false"},
+        {text: "dear", correct: "false"},
+        {text: "fox", correct: "false"},
+        {text: "hgbhg", correct: "true"},
+
+        ],
+    },
+    {
+        "id": 2,
+        "question": "what is national bird",
+        
+        
+    }
+]
+        let score_no = 0;
+     
+        
             
            let reasioning = function(){
             reasioning_modal.style.display = "block";
@@ -435,12 +915,11 @@
                 speakData.lang = 'en';
                 speechSynthesis.speak(speakData);
             }
-            setTimeout(() =>{
-              
+          
                 if('speechSynthesis' in window){
                     let voices = getVoices();
                     let rate = 0.8, pitch = 1, volume = 1;
-                    let text = "please click on next button to start a quiz";
+                    let text = "please click on start button to start a quiz";
                     speak(text, voices[1],rate,pitch,volume);
                 }
                 else{
@@ -448,79 +927,150 @@
                 
                 }
 
-            },2000)
-            let array = [
-            {
-                "id": 1,
-                "question": "what is the color",
-                "answer": "yellow",
-                "options": ["black", "cyan", "green", "orange"],
-            },
-            {
-                "id": 2,
-                "type": "difficult",
-                "question": "what is national bird",
-                "answer": "peackock",
-                "options": [
-                {text: "tiger", correct: "false"},
-                {text: "dear", correct: "false"},
-                {text: "fox", correct: "false"},
-                {text: "peackock", correct: "true"},
-    
-                ],
-            },
-            {
-                "id": 2,
-                "type": "difficult",
-                "question": "what is n bbj jjh",
-                "answer": "peackock",
-                "options": [
-                {text: "tiger", correct: "false"},
-                {text: "dear", correct: "false"},
-                {text: "fox", correct: "false"},
-                {text: "hgbhg", correct: "true"},
-    
-                ],
-            },
-            {
-                "id": 2,
-                "question": "what is n bbj jjh",
-                "answer": "peackock",
-                "options": [
-                {text: "tiger", correct: "false"},
-                {text: "dear", correct: "false"},
-                {text: "fox", correct: "false"},
-                {text: "hgbhg", correct: "true"},
-    
-                ],
-            },
-            {
-                "id": 2,
-                "question": "what is national bird",
-                
-                
-            }
-        ]
-        let question = document.getElementById("Question");
-        let options = document.getElementById("options");
-        let next = document.getElementById("next");
-        let previous = document.getElementById("previous");
-        let num = 0;
-        let audio = new Audio("tic-tac-27828.mp3");
-        let alarm = new Audio("clock-alarm-8761.mp3");
-        let alarm2 = document.getElementById("alarm");
-    
-        let score_no = 0;
-       
         
-        next.onclick = function(){
+      
+      
+        start.onclick = function(){
            
-    
-           
-         
+            start.style.display = "none";
+            bg1.style.display = "block";
+           setTimeout(()=>{
+            type1.style.display = "block";
             var countDate = 30
-        var count = setInterval(function(){
+            var count = setInterval(function(){
+                
+                var diff = countDate--;
+              
+                let timer = document.getElementById("timer");
+                timer.innerHTML = diff;
+                audio.play();
+                if(diff == 0){
+                  clearInterval(count);
+                  audio.pause();
+                  alarm.play();
+                  alarm2.classList.add("alarm");
+                  setTimeout(() =>{
+                    alarm.pause();
+                    alarm2.classList.remove("alarm");
+        
+                  },5000)
+                }
+                
+        
+        
+                  },1000)
+        
+                
+             
+              while(options.firstChild){
+                    options.removeChild(options.firstChild);
+                }
+                question.innerText = array[num].question;
+                    
+               
+                
+                array[num].options.forEach(option);
+                if(array[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
             
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
+                
+               
+                function option(option){
+                    const button = document.createElement("button");
+                   button.classList.add("options");
+                    button.innerText = option.text;
+                   
+                    
+                    options.appendChild(button);
+                    
+                    let answers = 0;
+                    
+                    if(option.correct){
+                         
+                        
+                         button.dataset.correct = option.correct;
+                       
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
+                }
+               
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
+    
+                      
+                        
+                        
+            
+                    }
+                    else{
+                        answer.classList.add("error");
+                    }
+                  
+            
+                }
+               
+            
+        
+         
+
+           },5000);
+        }
+               
+              
+    
+            
+            
+
+          
+
+           
+        
+      
+            next.onclick = function(){
+                clearInterval(count);
+                var diff = 0;
+                let timer = document.getElementById("timer");
+                let countDate = 30;
+        var count =  setInterval(function(){
+                
             var diff = countDate--;
           
             let timer = document.getElementById("timer");
@@ -540,70 +1090,115 @@
             
     
     
-        },1000)
+              },1000)
+               
+               
+                num++;
+
+           
     
             
-            num++;
-          while(options.firstChild){
-                options.removeChild(options.firstChild);
-            }
-            question.innerText = array[num].question;
-                
-           
-            
-            array[num].options.forEach(option);
-            if(array[num].type == "difficult"){
-                console.log("difficult");
+         
                
-                    let difficult = document.getElementById("difficult");
-                    difficult.style.display = "block";
-                    if('speechSynthesis' in window){
-                        let voices = getVoices();
-                        let rate = 0.8, pitch = 1, volume = 2;
-                        let text = "oh! this question is  to  difficult";
-                        speak(text, voices[1],rate,pitch,volume);
-                    }
-                    else{
-                        console.log("error");
-                    
-                    }
+          
+              
         
-                setTimeout(()=>{
-                    let difficult = document.getElementById("difficult");
-                    difficult.style.display = "none";
-            },10000)
-            }
                 
-    
-            
-           
-            function option(option){
-                const button = document.createElement("button");
-               button.classList.add("options");
-                button.innerText = option.text;
+               
+              while(options.firstChild){
+                    options.removeChild(options.firstChild);
+                }
+                question.innerText = array[num].question;
+                    
                
                 
-                options.appendChild(button);
+                array[num].options.forEach(option);
+                if(array[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
+            
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
                 
-                let answers = 0;
-                
-                if(option.correct){
-                     
+               
+                function option(option){
+                    const button = document.createElement("button");
+                   button.classList.add("options");
+                    button.innerText = option.text;
+                   
                     
-                     button.dataset.correct = option.correct;
+                    options.appendChild(button);
                     
+                    let answers = 0;
                     
-                    
+                    if(option.correct){
+                         
+                        
+                         button.dataset.correct = option.correct;
+                         clearInterval(count);
+                        
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
                 }
                
-                button.addEventListener("click", clicked);
-               
-            }
-           
-            function clicked(e){
-             
-                console.log("cliked");
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
     
+                      
+                        
+                        
+            
+                    }
+                    else if(!isCorrect){
+                        answer.classList.add("error");
+
+                    }
+                    else{
+                        clearInterval(count);
+                       
+                    }
+                    
+                  
+            
+                }
+               if(!function clicked(e){
+                console.log("cliked");
+        
                 const answer = e.target;
                 const isCorrect = answer.dataset.correct === "true";
                  
@@ -622,15 +1217,26 @@
                     
         
                 }
-                else{
+                else if(!isCorrect){
                     answer.classList.add("error");
+
                 }
-              
-        
+                else{
+                    clearInterval(count);
+                   
+                }
+
+               }){
+                clearInterval(count);
+
+               }
             }
-           
-        }
-     
+         
+
+        
+       
+        
+       
      
      
      
@@ -667,7 +1273,7 @@
               if(isCorrect){
                   answer.classList.add("correct");
                   audio.pause();
-                  clearInterval(count);
+                 
       
               }
               else{
@@ -682,8 +1288,791 @@
        
     }
           
+           let mathsquiz = function(){
+            mathsquiz_modal.style.display = "block";
+            container.style.display = "none";
+            function getVoices(){
+                let voices = speechSynthesis.getVoices();
+                if(!voices.length){
+                    let utterance = new SpeechSynthesisUtterance(" ");
+                    speechSynthesis.speak(utterance);
+                    voices = speechSynthesis.getVoices();
+                }
+                return voices;
+            }
+            function speak(text, voice, rate, pitch, volume){
+                let speakData = new SpeechSynthesisUtterance();
+                speakData.volume = volume;
+                speakData.rate = rate;
+                speakData.pitch = pitch;
+                speakData.voice = voice;
+                speakData.text = text;
+                speakData.lang = 'en';
+                speechSynthesis.speak(speakData);
+            }
+          
+                if('speechSynthesis' in window){
+                    let voices = getVoices();
+                    let rate = 0.8, pitch = 1, volume = 1;
+                    let text = "please click on start button to start a quiz";
+                    speak(text, voices[1],rate,pitch,volume);
+                }
+                else{
+                    console.log("error");
+                
+                }
 
         
+      
+      
+        start2.onclick = function(){
+           
+            start2.style.display = "none";
+            bg2.style.display = "block";
+           setTimeout(()=>{
+            type2.style.display = "block";
+            var countDate = 30
+            var count = setInterval(function(){
+                
+                var diff = countDate--;
+              
+                let timer2 = document.getElementById("timer2");
+                timer2.innerHTML = diff;
+                audio.play();
+                if(diff == 0){
+                  clearInterval(count);
+                  audio.pause();
+                  alarm.play();
+                  alarm2.classList.add("alarm");
+                  setTimeout(() =>{
+                    alarm.pause();
+                    alarm2.classList.remove("alarm");
+        
+                  },5000)
+                }
+                
+        
+        
+                  },1000)
+        
+                
+             
+             
+                question2.innerText = array2[num].question;
+                    
+               
+                
+                array2[num].options.forEach(option2);
+                if(array2[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
+            
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
+                
+               
+                function option2(option2){
+                    const button = document.createElement("button");
+                   button.classList.add("options2");
+                    button.innerText = option2.text;
+                   
+                    
+                    options2.appendChild(button);
+                    
+                    let answers = 0;
+                    
+                    if(option2.correct){
+                         
+                        
+                         button.dataset.correct = option2.correct;
+                       
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
+                }
+               
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
+    
+                      
+                        
+                        
+            
+                    }
+                    else{
+                        answer.classList.add("error");
+                    }
+                  
+            
+                }
+               
+            
+        
+         
+
+           },5000);
+        }
+               
+              
+    
+            
+            
+
+          
+
+           
+        
+      
+            next2.onclick = function(){
+                clearInterval(count);
+                var diff = 0;
+                let timer2 = document.getElementById("timer2");
+                let countDate = 30;
+        var count =  setInterval(function(){
+                
+            var diff = countDate--;
+          
+            let timer2 = document.getElementById("timer2");
+            timer2.innerHTML = diff;
+            audio.play();
+            if(diff == 0){
+              clearInterval(count);
+              audio.pause();
+              alarm.play();
+              alarm2.classList.add("alarm");
+              setTimeout(() =>{
+                alarm.pause();
+                alarm2.classList.remove("alarm");
+    
+              },5000)
+            }
+            
+    
+    
+              },1000)
+               
+               
+                num++;
+
+           
+    
+            
+         
+               
+          
+              
+        
+                
+               
+              while(options2.firstChild){
+                    options2.removeChild(options2.firstChild);
+                }
+                question2.innerText = array2[num].question;
+                    
+               
+                
+                array2[num].options.forEach(option2);
+                if(array2[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
+            
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
+                
+               
+                function option2(option2){
+                    const button = document.createElement("button");
+                   button.classList.add("options2");
+                    button.innerText = option2.text;
+                   
+                    
+                    options2.appendChild(button);
+                    
+                    let answers = 0;
+                    
+                    if(option2.correct){
+                         
+                        
+                         button.dataset.correct = option2.correct;
+                         clearInterval(count);
+                        
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
+                }
+               
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
+    
+                      
+                        
+                        
+            
+                    }
+                    else if(!isCorrect){
+                        answer.classList.add("error");
+
+                    }
+                    else{
+                        clearInterval(count);
+                       
+                    }
+                    
+                  
+            
+                }
+               if(!function clicked(e){
+                console.log("cliked");
+        
+                const answer = e.target;
+                const isCorrect = answer.dataset.correct === "true";
+                 
+              
+                if(isCorrect){
+                    score_no++;
+                    score.innerHTML =+ score_no +"/10"
+                   
+                    
+                    answer.classList.add("correct");
+                    audio.pause();
+                    clearInterval(count);
+
+                  
+                    
+                    
+        
+                }
+                else if(!isCorrect){
+                    answer.classList.add("error");
+
+                }
+                else{
+                    clearInterval(count);
+                   
+                }
+
+               }){
+                clearInterval(count);
+
+               }
+            }
+         
+
+        
+       
+        
+       
+     
+     
+     
+        previous2.onclick = function(){
+        num--;
+        while(options2.firstChild){
+              options2.removeChild(options2.firstChild);
+          }
+          question2.innerText = array2[num].question; 
+         
+          
+          arra2[num].options.forEach(option);
+         
+          function option2(option2){
+              const button = document.createElement("button");
+             button.classList.add("options");
+              button.innerText = option2.text;
+              
+              options.appendChild(button);
+             
+              let answers = 0;
+              if(option2.correct){
+                   button.dataset.correct = option.correct;
+                  
+                  
+              }
+              button.addEventListener("click", clicked);
+             
+          }
+          function clicked(e){
+              console.log("cliked")
+              const answer = e.target;
+              const isCorrect = answer.dataset.correct === "true";
+              if(isCorrect){
+                  answer.classList.add("correct");
+                  audio.pause();
+                 
+      
+              }
+              else{
+                  answer.classList.add("error");
+              }
+            
+      
+          }
+         
+    
+       }
+
+           }
+       let english = function(){
+        english_modal.style.display = "block";
+            container.style.display = "none";
+            function getVoices(){
+                let voices = speechSynthesis.getVoices();
+                if(!voices.length){
+                    let utterance = new SpeechSynthesisUtterance(" ");
+                    speechSynthesis.speak(utterance);
+                    voices = speechSynthesis.getVoices();
+                }
+                return voices;
+            }
+            function speak(text, voice, rate, pitch, volume){
+                let speakData = new SpeechSynthesisUtterance();
+                speakData.volume = volume;
+                speakData.rate = rate;
+                speakData.pitch = pitch;
+                speakData.voice = voice;
+                speakData.text = text;
+                speakData.lang = 'en';
+                speechSynthesis.speak(speakData);
+            }
+          
+                if('speechSynthesis' in window){
+                    let voices = getVoices();
+                    let rate = 0.8, pitch = 1, volume = 1;
+                    let text = "please click on start button to start a quiz";
+                    speak(text, voices[1],rate,pitch,volume);
+                }
+                else{
+                    console.log("error");
+                
+                }
+
+        
+      
+      
+        start3.onclick = function(){
+           
+            start3.style.display = "none";
+            bg3.style.display = "block";
+           setTimeout(()=>{
+            type3.style.display = "block";
+            var countDate = 30
+            var count = setInterval(function(){
+                
+                var diff = countDate--;
+              
+                let timer3 = document.getElementById("timer3");
+                timer3.innerHTML = diff;
+                audio.play();
+                if(diff == 0){
+                  clearInterval(count);
+                  audio.pause();
+                  alarm.play();
+                  alarm2.classList.add("alarm");
+                  setTimeout(() =>{
+                    alarm.pause();
+                    alarm2.classList.remove("alarm");
+        
+                  },5000)
+                }
+                
+        
+        
+                  },1000)
+        
+                
+             
+              while(options3.firstChild){
+                    options3.removeChild(options3.firstChild);
+                }
+                question3.innerText = array3[num].question;
+                    
+               
+                
+                array3[num].options.forEach(option3);
+                if(array3[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
+            
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
+                
+               
+                function option3(option3){
+                    const button = document.createElement("button");
+                   button.classList.add("options3");
+                    button.innerText = option3.text;
+                   
+                    
+                    options3.appendChild(button);
+                    
+                    let answers = 0;
+                    
+                    if(option3.correct){
+                         
+                        
+                         button.dataset.correct = option3.correct;
+                       
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
+                }
+               
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
+    
+                      
+                        
+                        
+            
+                    }
+                    else{
+                        answer.classList.add("error");
+                    }
+                  
+            
+                }
+               
+            
+        
+         
+
+           },5000);
+        }
+               
+              
+    
+            
+            
+
+          
+
+           
+        
+      
+            next3.onclick = function(){
+                clearInterval(count);
+                var diff = 0;
+                let timer = document.getElementById("timer");
+                let countDate = 30;
+        var count =  setInterval(function(){
+                
+            var diff = countDate--;
+          
+            let timer3 = document.getElementById("timer");
+            timer3.innerHTML = diff;
+            audio.play();
+            if(diff == 0){
+              clearInterval(count);
+              audio.pause();
+              alarm.play();
+              alarm2.classList.add("alarm");
+              setTimeout(() =>{
+                alarm.pause();
+                alarm2.classList.remove("alarm");
+    
+              },5000)
+            }
+            
+    
+    
+              },1000)
+               
+               
+                num++;
+
+           
+    
+            
+         
+               
+          
+              
+        
+                
+               
+              while(options3.firstChild){
+                    options3.removeChild(options3.firstChild);
+                }
+                question3.innerText = array3[num].question;
+                    
+               
+                
+                array3[num].options.forEach(option3);
+                if(array3[num].type == "difficult"){
+                    console.log("difficult");
+                   
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "block";
+                        if('speechSynthesis' in window){
+                            let voices = getVoices();
+                            let rate = 0.8, pitch = 1, volume = 2;
+                            let text = "oh! this question is  to  difficult";
+                            speak(text, voices[1],rate,pitch,volume);
+                        }
+                        else{
+                            console.log("error");
+                        
+                        }
+            
+                    setTimeout(()=>{
+                        let difficult = document.getElementById("difficult");
+                        difficult.style.display = "none";
+                },10000)
+                }
+                    
+        
+                
+               
+                function option3(option3){
+                    const button = document.createElement("button");
+                   button.classList.add("options3");
+                    button.innerText = option3.text;
+                   
+                    
+                    options3.appendChild(button);
+                    
+                    let answers = 0;
+                    
+                    if(option3.correct){
+                         
+                        
+                         button.dataset.correct = option3.correct;
+                         clearInterval(count);
+                        
+                        
+                        
+                    }
+                   
+                    button.addEventListener("click", clicked);
+                   
+                }
+               
+                function clicked(e){
+                 
+                    console.log("cliked");
+        
+                    const answer = e.target;
+                    const isCorrect = answer.dataset.correct === "true";
+                     
+                  
+                    if(isCorrect){
+                        score_no++;
+                        score.innerHTML =+ score_no +"/10"
+                       
+                        
+                        answer.classList.add("correct");
+                        audio.pause();
+                        clearInterval(count);
+    
+                      
+                        
+                        
+            
+                    }
+                    else if(!isCorrect){
+                        answer.classList.add("error");
+
+                    }
+                    else{
+                        clearInterval(count);
+                       
+                    }
+                    
+                  
+            
+                }
+               if(!function clicked(e){
+                console.log("cliked");
+        
+                const answer = e.target;
+                const isCorrect = answer.dataset.correct === "true";
+                 
+              
+                if(isCorrect){
+                    score_no++;
+                    score.innerHTML =+ score_no +"/10"
+                   
+                    
+                    answer.classList.add("correct");
+                    audio.pause();
+                    clearInterval(count);
+
+                  
+                    
+                    
+        
+                }
+                else if(!isCorrect){
+                    answer.classList.add("error");
+
+                }
+                else{
+                    clearInterval(count);
+                   
+                }
+
+               }){
+                clearInterval(count);
+
+               }
+            }
+         
+
+        
+       
+        
+       
+     
+     
+     
+        previous.onclick = function(){
+        num--;
+        while(options3.firstChild){
+              options3.removeChild(options3.firstChild);
+          }
+          question3.innerText = array3[num].question; 
+         
+          
+          array3[num].options.forEach(option);
+         
+          function option(option3){
+              const button = document.createElement("button");
+             button.classList.add("options");
+              button.innerText = option.text;
+              
+              options3.appendChild(button);
+             
+              let answers = 0;
+              if(option3.correct){
+                   button.dataset.correct = option3.correct;
+                  
+                  
+              }
+              button.addEventListener("click", clicked);
+             
+          }
+          function clicked(e){
+              console.log("cliked")
+              const answer = e.target;
+              const isCorrect = answer.dataset.correct === "true";
+              if(isCorrect){
+                  answer.classList.add("correct");
+                  audio.pause();
+                 
+      
+              }
+              else{
+                  answer.classList.add("error");
+              }
+            
+      
+          }
+         
+    
+       }
+       } 
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    
