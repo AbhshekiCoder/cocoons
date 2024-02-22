@@ -311,10 +311,7 @@
     font-size: 30px;
 
 }
-#reasioning-modal{
-    background-image: linear-gradient(cyan, blue);
-   
-}
+
    #reasioning{
    
     
@@ -326,7 +323,7 @@
     height: 700px;
    
   
-    ;
+    
     
   
     
@@ -453,7 +450,7 @@ margin-left: 20px;
     width: 300px;
     border-radius: 10px 10px;
     margin-top: 20px;
-    background-color: white;
+    border-color: yellow;
     
     height: 40px;
     border: solid 2px;
@@ -497,6 +494,12 @@ margin-left: 20px;
 
     }
 }
+
+.navbar>ol>li>a>img{
+    height: 100px;
+    width: 200px;
+
+}
    
    
    
@@ -511,6 +514,12 @@ margin-left: 20px;
    
 </style>
 <body>
+    <nav class = "navbar sticky-top" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html"><img src = "img/logo.png"/></a></li>
+         
+        </ol>
+      </nav>
     <div class = "card-container " id = "container">
 
         <div class = "cards row">
@@ -1014,9 +1023,11 @@ margin-left: 20px;
                         
                     }
                    
+                   
                     button.addEventListener("click", clicked);
                    
                 }
+            
                
                 function clicked(e){
                  
@@ -1040,6 +1051,7 @@ margin-left: 20px;
                         
             
                     }
+                    
                     else{
                         answer.classList.add("error");
                     }
@@ -1152,15 +1164,16 @@ margin-left: 20px;
                          
                         
                          button.dataset.correct = option.correct;
-                         clearInterval(count);
                         
                         
                         
                     }
                    
+                   
                     button.addEventListener("click", clicked);
                    
                 }
+               
                
                 function clicked(e){
                  
@@ -1184,12 +1197,9 @@ margin-left: 20px;
                         
             
                     }
-                    else if(!isCorrect){
-                        answer.classList.add("error");
-
-                    }
+                    
                     else{
-                        clearInterval(count);
+                        answer.classList.add("error");
                        
                     }
                     
