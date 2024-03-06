@@ -91,18 +91,33 @@
             .carousel-item>img{
                 height: 200px;
             }
+             .carousel-item>img{
+                height: 200px;
+            }
             .it-courses{
                 overflow-x: auto;
-                overflow: scroll;
-                width: 300px;
-                height: 300px;
+               
+                width: 350px;
+                height: 320px;
+                scroll-snap-type: mandatory x;
+              
+                margin-right: 50px;
+                
+                
                
             }
             .it-courses>.col{
-                width: 290px;
+                width: 300px;
+                margin-left: 30px;
+                display: flex;
+                justify-content: center;
+                scroll-snap-align: center;
             }
-            .it-courses>.col>img{
-                width: 290px;
+            .it-courses>.col>a>img{
+                width: 320px;
+                height: 280px;
+                
+                
             }
             .form{
                 display: block;
